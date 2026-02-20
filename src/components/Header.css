@@ -110,6 +110,11 @@
   display: none;
 }
 
+/* Mobile navigation drawer - hidden by default */
+.mobile-nav {
+  display: none;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .header-container {
@@ -219,6 +224,7 @@
   
   /* Mobile navigation drawer */
   .mobile-nav {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
