@@ -428,6 +428,10 @@
     font-size: 2rem;
   }
   
+  .search-input {
+    font-size: 16px;
+  }
+  
   .filter-buttons {
     gap: 0.5rem;
   }
