@@ -1,0 +1,680 @@
+.home {
+  width: 100%;
+  padding-top: 1rem;
+  background-color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('/images/home-pic.png') center/cover no-repeat;
+  height: 395px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  max-width: 800px;
+  padding: 2rem;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #0077BE;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0052a3;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #333;
+}
+
+.btn-secondary:focus {
+  outline: none;
+}
+
+/* Statistics Section */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #0077BE;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Services Section */
+.services {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.services-subtitle {
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  margin-bottom: 1rem;
+}
+
+.service-icon svg {
+  width: 30px;
+  height:30px;
+}
+
+.teacher-support .service-icon svg {
+  stroke: #dc3545;
+}
+
+.educational-resources .service-icon svg {
+  stroke: #28a745;
+}
+
+.training-programs .service-icon svg {
+  stroke: #ffc107;
+}
+
+.announcements .service-icon svg {
+  stroke: #0077BE;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Quick Access Section */
+.quick-access {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  width: 100%;
+  overflow: hidden;
+}
+
+.quick-access h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.quick-access-subtitle {
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.access-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.access-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.access-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.access-card:nth-child(1) .access-icon svg {
+  stroke: #0077BE;
+}
+
+.access-card:nth-child(2) .access-icon svg {
+  stroke: #28a745;
+}
+
+.access-card:nth-child(3) .access-icon svg {
+  stroke: #dc3545;
+}
+
+.access-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+.access-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.access-btn {
+  background-color: white;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 400;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.access-btn:hover {
+  color: #0077BE;
+  border-color: #0077BE;
+  background-color: #f8f9fa;
+}
+
+.access-btn:focus {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 70px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+  
+  .services-grid,
+  .quick-access-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    text-align: center;
+  }
+  
+  .service-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service-card h3 {
+    text-align: center;
+  }
+  
+  .service-card p {
+    text-align: center;
+  }
+}
+
+/* Join Community Section */
+.join-community {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.join-community h2 {
+  font-size: 2rem;
+  color: #0077BE;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.join-community p {
+  color: #0077BE;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+  line-height: 1.6;
+}
+
+.btn-join {
+  background-color: #0077BE;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+  margin-bottom:3rem !important;
+}
+
+.btn-join:hover {
+  background-color: #0052a3;
+  transform: translateY(-1px);
+}
+
+.btn-join:focus {
+  outline: none;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background-color: #0077BE;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: white;
+}
+
+.newsletter-form input::placeholder {
+  color: #999;
+}
+
+.newsletter-form button {
+  background-color: white;
+  color: #333;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+
+.newsletter-form button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.newsletter-form button:focus {
+  outline: none;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .home-hero {
+    height: 350px;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .home-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .home-hero p {
+    font-size: 1rem;
+  }
+  
+  .stats-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .quick-access {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .access-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-hero {
+    height: 300px;
+    padding: 2rem 1rem;
+  }
+  
+  .home-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-hero p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .quick-access {
+    padding: 2rem 1rem;
+  }
+  
+  .quick-access h2 {
+    font-size: 1.8rem;
+  }
+  
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .access-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .access-icon {
+    width: auto;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .access-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .access-card h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .access-card p {
+    font-size: 0.85rem;
+  }
+  
+  .access-btn {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding-top: 65px;
+  }
+  
+  .home-hero {
+    height: 280px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .home-hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .home-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .stats-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.2rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.95rem;
+  }
+  
+  .quick-access {
+    padding: 1.5rem 1rem;
+  }
+  
+  .quick-access h2 {
+    font-size: 1.5rem;
+  }
+  
+  .access-card {
+    padding: 1.2rem;
+    text-align: center;
+  }
+  
+  .access-icon {
+    margin: 0 auto 0.75rem auto;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .access-card h3 {
+    text-align: center;
+  }
+}

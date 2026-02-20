@@ -1,0 +1,300 @@
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  height: 85px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Desktop Navigation */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #0077BE;
+  background-color: rgba(14, 77, 146, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #0077BE;
+  background-color: rgba(14, 77, 146, 0.18);
+}
+
+/* Teacher Login Button */
+.teacher-login {
+  background: linear-gradient(135deg, #0077BE 0%, #0E4D92 100%);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 119, 190, 0.25);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.teacher-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 190, 0.35);
+}
+
+.nav-link-mobile-btn {
+  display: none;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #444;
+}
+
+.mobile-menu-btn svg {
+  display: block;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 1.5rem;
+  }
+  
+  .nav {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .teacher-login {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  /* White background layer */
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .header.transparent::after {
+    opacity: 0;
+  }
+  
+  .header-container {
+    padding: 0 1rem;
+    z-index: 102;
+    position: relative;
+  }
+  
+  .logo {
+    z-index: 103;
+    position: relative;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  /* Hide desktop teacher login */
+  .teacher-login {
+    display: none;
+  }
+  
+  /* Show mobile menu button */
+  .mobile-menu-btn {
+    display: block;
+    z-index: 103;
+    position: relative;
+  }
+  
+  /* Desktop nav hidden on mobile */
+  .nav {
+    display: none;
+  }
+  
+  /* Mobile overlay backdrop */
+  .mobile-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 98;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Mobile navigation drawer */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    padding: 80px 0 1rem 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.95rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background-color 0.2s;
+  }
+  
+  .mobile-nav-link:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .mobile-nav-link.active {
+    background-color: rgba(0, 119, 190, 0.06);
+    border-right: 3px solid #0077BE;
+    color: #0077BE;
+  }
+  
+  /* Mobile teacher login button */
+  .mobile-teacher-login {
+    display: block;
+    margin: 1rem 1rem 0.5rem 1rem;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(135deg, #0077BE 0%, #0E4D92 100%);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0, 119, 190, 0.3);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .mobile-teacher-login:hover {
+    background: linear-gradient(135deg, #005fa3 0%, #0a3d6e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 119, 190, 0.4);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 65px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .mobile-nav {
+    width: 75%;
+    padding-top: 75px;
+  }
+}

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: white;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}

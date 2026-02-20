@@ -1,0 +1,368 @@
+.teacher-portal {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 1rem;
+  background-color: white;
+}
+
+/* Hero Section */
+.portal-hero {
+  background-color: #0077BE;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  height: 245px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portal-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.portal-hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Stats Section */
+.portal-stats {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Features Section */
+.portal-features {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.features-header p {
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon svg {
+  stroke: white;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portal-hero h1 {
+    font-size: 2rem;
+  }
+
+  .portal-hero p {
+    font-size: 1rem;
+  }
+
+  .portal-hero {
+    padding: 3rem 2rem;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-card h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .features-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .portal-stats {
+    padding: 3rem 2rem;
+  }
+
+  .portal-features {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-hero {
+    padding: 3rem 2rem;
+  }
+
+  .portal-stats {
+    padding: 2.5rem 2rem;
+  }
+
+  .portal-features {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .teacher-portal-hero {
+    height: 200px;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .teacher-portal-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .teacher-portal-hero p {
+    font-size: 1rem;
+  }
+  
+  .stats-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .features-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .teacher-portal-hero {
+    height: 180px;
+    padding: 2rem 1rem;
+  }
+  
+  .teacher-portal-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .teacher-portal-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+  
+  .stats-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .stat-card {
+    padding: 1.2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .features-section {
+    padding: 2rem 1rem;
+  }
+  
+  .features-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+    height: auto;
+  }
+  
+  .feature-icon {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .feature-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teacher-portal-hero {
+    height: 160px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .teacher-portal-hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .teacher-portal-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .stats-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stats-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .features-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .features-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.2rem;
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}

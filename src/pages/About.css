@@ -1,0 +1,713 @@
+.about {
+  width: 100%;
+  padding-top: 1rem;
+  background-color: white;
+}
+
+/* About Hero Section */
+.about-hero {
+  background-color: #0077BE;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  min-height: 245px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 800px;
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.mission-vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.mission-card,
+.vision-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-title svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.mission-card .icon-title svg {
+  stroke: #dc3545;
+}
+
+.vision-card .icon-title svg {
+  stroke: #28a745;
+}
+
+.mission-card h2,
+.vision-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: 400;
+}
+
+.mission-card p,
+.vision-card p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.building-image {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 670px;
+  aspect-ratio: 670 / 587;
+}
+
+.building-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Core Values Section */
+.core-values {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.core-values h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 100%;
+  max-width: 280px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  margin-bottom: 1rem;
+}
+
+.value-card:nth-child(1) .value-icon svg {
+  stroke: #dc3545;
+}
+
+.value-card:nth-child(2) .value-icon svg {
+  stroke: #28a745;
+}
+
+.value-card:nth-child(3) .value-icon svg {
+  stroke: #0077BE;
+}
+
+.value-card:nth-child(4) .value-icon svg {
+  stroke: #ffc107;
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Management Team Section */
+.management-team {
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.management-team h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.team-carousel-container {
+  max-width: 1400px;
+  margin: 3rem auto 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.team-carousel-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.team-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.team-photo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.team-role {
+  color: #0077BE;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.team-description {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.carousel-nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.carousel-nav-btn:hover {
+  background: #f5f5f5;
+  border-color: #0077BE;
+}
+
+.carousel-nav-btn svg {
+  stroke: #333;
+}
+
+.carousel-nav-btn:hover svg {
+  stroke: #0077BE;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator-dot.active {
+  background: #0077BE;
+  width: 12px;
+  height: 12px;
+}
+
+.indicator-dot:hover {
+  background: #0077BE;
+  opacity: 0.7;
+}
+
+/* Journey & Achievements Section */
+.journey-achievements {
+  background-color: #0077BE;
+  color: white;
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.journey-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.journey-content {
+  width: 100%;
+}
+
+.journey-content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.achievement-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.achievement-icon {
+  flex-shrink: 0;
+}
+
+.achievement-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: white;
+}
+
+.achievement-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.achievement-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.journey-photo {
+  width: 100%;
+  max-width: 670px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  justify-self: end;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .about-hero {
+    min-height: 200px;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+  }
+  
+  .mission-vision {
+    padding: 3rem 1.5rem;
+  }
+  
+  .mission-vision-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .building-image {
+    grid-row: auto;
+    grid-column: auto;
+    max-width: 100%;
+  }
+  
+  .core-values {
+    padding: 3rem 1.5rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .management-team {
+    padding: 3rem 1.5rem;
+  }
+  
+  .team-carousel-container {
+    gap: 1.5rem;
+  }
+  
+  .journey-achievements {
+    padding: 3rem 1.5rem;
+  }
+  
+  .journey-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .journey-image {
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding-top: 70px;
+  }
+  
+  .about-hero {
+    min-height: 180px;
+    padding: 2rem 1rem;
+  }
+  
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .mission-vision {
+    padding: 2.5rem 1rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 1.5rem;
+  }
+  
+  .mission-card h2,
+  .vision-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .mission-card p,
+  .vision-card p {
+    font-size: 0.9rem;
+  }
+  
+  .core-values {
+    padding: 2.5rem 1rem;
+  }
+  
+  .core-values h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .value-card {
+    max-width: 100%;
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  
+  .icon-title svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .value-card p {
+    font-size: 0.85rem;
+  }
+  
+  .management-team {
+    padding: 2.5rem 1rem;
+  }
+  
+  .management-team h2 {
+    font-size: 1.8rem;
+  }
+  
+  .team-carousel-container {
+    gap: 1rem;
+  }
+  
+  .team-slide {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  
+  .team-card {
+    max-width: 100%;
+    min-height: auto;
+    width: 100%;
+  }
+  
+  .team-photo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-nav-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-nav-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .journey-achievements {
+    padding: 2.5rem 1rem;
+  }
+  
+  .journey-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievement-item {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievement-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .achievement-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    min-height: 160px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .mission-vision {
+    padding: 2rem 1rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 1.2rem;
+  }
+  
+  .mission-card h2,
+  .vision-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .core-values {
+    padding: 2rem 1rem;
+  }
+  
+  .core-values h2 {
+    font-size: 1.5rem;
+  }
+  
+  .management-team {
+    padding: 2rem 1rem;
+  }
+  
+  .management-team h2 {
+    font-size: 1.5rem;
+  }
+  
+  .team-card {
+    padding: 1.2rem;
+  }
+  
+  .carousel-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .carousel-nav-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .journey-achievements {
+    padding: 2rem 1rem;
+  }
+  
+  .journey-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .achievement-item {
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .achievement-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .achievement-text h3 {
+    font-size: 1rem;
+  }
+  
+  .achievement-text p {
+    font-size: 0.85rem;
+  }
+}

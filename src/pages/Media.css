@@ -1,0 +1,550 @@
+.media {
+  width: 100%;
+  padding-top: 1rem;
+  background-color: white;
+}
+
+/* Media Hero Section */
+.media-hero {
+  background-color: #0077BE;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  height: 245px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.media-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Media Content */
+.media-content {
+  padding: 3rem 2rem;
+  background-color: white;
+}
+
+/* Selection Actions Bar */
+.selection-actions-bar {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  background-color: #e3f2fd;
+  border: 2px solid #0077BE;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.selection-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0077BE;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.selection-info svg {
+  stroke: #0077BE;
+}
+
+.download-all-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  border: none;
+  font-family: inherit;
+  background-color: #0077BE;
+  color: white;
+}
+
+.download-all-btn:hover {
+  background-color: #005fa3;
+}
+
+.media-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-section {
+  margin-bottom: 4rem;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.gallery-header-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.select-all-btn {
+  background-color: white;
+  color: #0077BE;
+  border: 1px solid #0077BE;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+}
+
+.select-all-btn:hover {
+  background-color: #0077BE;
+  color: white;
+}
+
+.select-all-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.gallery-info {
+  flex: 1;
+}
+
+.gallery-header h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.gallery-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.meta-item svg {
+  width: 14px;
+  height: 14px;
+  stroke: #999;
+}
+
+.view-all-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+}
+
+.view-all-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: #666;
+  transition: transform 0.3s;
+}
+
+.view-all-btn.expanded svg {
+  transform: rotate(180deg);
+}
+
+.view-all-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.view-all-btn:focus {
+  outline: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item.selected {
+  box-shadow: 0 0 0 2px #0077BE;
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.gallery-item:hover .gallery-item-overlay,
+.gallery-item.selected .gallery-item-overlay {
+  opacity: 1;
+}
+
+/* Checkbox Button */
+.checkbox-overlay-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: rgba(0, 119, 190, 0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.checkbox-overlay-btn svg {
+  stroke: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.checkbox-overlay-btn.checked {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.checkbox-overlay-btn.checked svg {
+  opacity: 1;
+}
+
+.checkbox-overlay-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Download button */
+.download-overlay-btn {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-overlay-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.download-overlay-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #333;
+}
+
+/* Download Guidelines Section */
+.download-guidelines {
+  background-color: #f5f5f5;
+  padding: 3rem 2rem;
+}
+
+.guidelines-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.guidelines-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.guidelines-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guidelines-section li {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.guidelines-section li:before {
+  content: "•";
+  color: #0077BE;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .media {
+    padding-top: 70px;
+  }
+  
+  .media-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .gallery-header {
+    flex-direction: column;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .guidelines-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .media-hero {
+    height: 200px;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .media-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .media-hero p {
+    font-size: 1rem;
+  }
+  
+  .media-content {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .download-guidelines {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .guidelines-container {
+    gap: 2rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .media-hero {
+    height: 180px;
+    padding: 2rem 1rem;
+  }
+  
+  .media-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .media-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .media-content {
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .gallery-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .gallery-description {
+    font-size: 0.85rem;
+  }
+  
+  .gallery-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .view-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .download-overlay-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .download-overlay-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .download-guidelines {
+    padding: 2rem 1rem;
+  }
+  
+  .guidelines-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .guidelines-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .guidelines-section ul li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-hero {
+    height: 160px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .media-hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .media-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .media-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .gallery-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item::after {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .download-guidelines {
+    padding: 1.5rem 1rem;
+  }
+  
+  .guidelines-section h3 {
+    font-size: 1rem;
+  }
+}
