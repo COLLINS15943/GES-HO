@@ -354,6 +354,10 @@
   .service-card p {
     text-align: center;
   }
+  
+  .newsletter-form input {
+    font-size: 16px;
+  }
 }
 
 /* Join Community Section */
