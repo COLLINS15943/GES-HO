@@ -681,4 +681,8 @@
   .access-card h3 {
     text-align: center;
   }
+  
+  .newsletter-form input {
+    font-size: 16px;
+  }
 }
